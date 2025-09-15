@@ -1,11 +1,11 @@
-import { Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { mockData } from '../assets/mockData';
 import DetailScreenHeader from '../components/DetailScreenHeader';
+import ItemDetails from '../components/ItemDetails';
 import { DetailsScreenProps } from '../types';
-import PlayButton from '../components/ui/PlayButton';
-
-//fix header padding
+import useVideoProgress from '../hooks/useVideoProgress';
+import { useFocusEffect } from '@react-navigation/native';
+import { useCallback } from 'react';
 
 export default function DetailsScreen({
   route,
@@ -13,22 +13,31 @@ export default function DetailsScreen({
 }: DetailsScreenProps) {
   const { itemId } = route.params;
   const item = mockData.find(i => i.id === itemId);
-  const handlePlay = () => {
+  const { progress, loading, refreshProgress } = useVideoProgress(itemId);
+  const handlePlay = (resume = false) => {
     navigation.navigate('Video', {
       itemId: item?.id!,
       itemTitle: item?.title!,
       videoUrl: item?.videoUrl!,
+      startTime: resume && progress ? progress : 0,
     });
   };
+  useFocusEffect(
+    useCallback(() => {
+      refreshProgress();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [itemId, refreshProgress]),
+  );
   return (
-    <SafeAreaView className="h-full w-full flex-1  bg-zinc-900 px-4">
+    <SafeAreaView className=" w-full flex-1 flex-col bg-zinc-900 px-4">
       <DetailScreenHeader />
-      <View className=" flex-col items-start justify-start gap-4 p-4 bg-zinc-800 mt-8 rounded-xl">
-        <Text className="text-white text-3xl">{item?.title}</Text>
-        <Text className="text-white text-xl text-pretty">{item?.synopsis}</Text>
-        <Text className="text-white text-xl">{item?.rating}</Text>
-        <PlayButton onPress={handlePlay} />
-      </View>
+      <ItemDetails
+        item={item!}
+        handlePlay={() => handlePlay(false)}
+        handleContinue={() => handlePlay(true)}
+        showResume={!!progress}
+        loading={loading}
+      />
     </SafeAreaView>
   );
 }
