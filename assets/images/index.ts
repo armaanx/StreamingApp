@@ -1,0 +1,18 @@
+export const posters: Record<string, any> = {
+  '1': require('./1.jpg'),
+  '2': require('./2.jpg'),
+  '3': require('./3.jpg'),
+  '4': require('./4.jpg'),
+  '5': require('./5.jpg'),
+  '6': require('./6.jpg'),
+  '7': require('./7.jpg'),
+  '8': require('./8.jpg'),
+  '9': require('./9.jpg'),
+  '10': require('./10.jpg'),
+  '11': require('./11.jpg'),
+  '12': require('./12.jpg'),
+  '13': require('./13.jpg'),
+  '14': require('./14.jpg'),
+  '15': require('./15.jpg'),
+  '16': require('./16.jpg'),
+};
