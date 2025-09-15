@@ -17,11 +17,11 @@ export const mockData = [
     year: '2010',
     genre: 'Sci-Fi',
     rating: 8.8,
-    poster: 'https://image.tmdb.org/t/p/w500/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg',
+    poster: './assets/images/1.jpg',
     synopsis:
       "A skilled thief enters people's dreams to steal secrets, but must pull off one final job — planting an idea instead.",
     videoUrl:
-      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4',
     subtitles: 'https://www.example.com/subs/inception.vtt',
   },
   {
@@ -30,7 +30,7 @@ export const mockData = [
     year: '2014',
     genre: 'Sci-Fi',
     rating: 8.6,
-    poster: 'https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg',
+    poster: './assets/images/2.jpg',
     synopsis:
       "A team of explorers travel through a wormhole in space to ensure humanity's survival.",
     videoUrl:
@@ -43,7 +43,7 @@ export const mockData = [
     year: '2008',
     genre: 'Action',
     rating: 9.0,
-    poster: 'https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg',
+    poster: './assets/images/3.jpg',
     synopsis:
       'Batman faces his greatest challenge when the Joker wreaks havoc on Gotham.',
     videoUrl:
@@ -56,7 +56,7 @@ export const mockData = [
     year: '2019',
     genre: 'Action',
     rating: 8.4,
-    poster: 'https://image.tmdb.org/t/p/w500/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg',
+    poster: './assets/images/4.jpg',
     synopsis:
       "After the devastating events of Infinity War, the Avengers assemble once more to undo Thanos' actions.",
     videoUrl:
@@ -69,7 +69,7 @@ export const mockData = [
     year: '2019',
     genre: 'Thriller',
     rating: 8.6,
-    poster: 'https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg',
+    poster: './assets/images/5.jpg',
     synopsis:
       'Greed and class discrimination threaten the symbiotic relationship between two families.',
     videoUrl:
@@ -82,7 +82,7 @@ export const mockData = [
     year: '1999',
     genre: 'Sci-Fi',
     rating: 8.7,
-    poster: 'https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg',
+    poster: './assets/images/6.jpg',
     synopsis:
       'A hacker discovers reality is a simulation and joins the rebellion against its controllers.',
     videoUrl:
@@ -95,7 +95,7 @@ export const mockData = [
     year: '1999',
     genre: 'Drama',
     rating: 8.8,
-    poster: 'https://image.tmdb.org/t/p/w500/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg',
+    poster: './assets/images/7.jpg',
     synopsis:
       'An office worker and a soap maker form an underground fight club with far-reaching consequences.',
     videoUrl:
@@ -108,7 +108,7 @@ export const mockData = [
     year: '2019',
     genre: 'Drama',
     rating: 8.4,
-    poster: 'https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg',
+    poster: './assets/images/8.jpg',
     synopsis:
       'A mentally troubled man embarks on a downward spiral that leads to the birth of the infamous Joker.',
     videoUrl:
@@ -121,7 +121,7 @@ export const mockData = [
     year: '2014',
     genre: 'Drama',
     rating: 8.5,
-    poster: 'https://image.tmdb.org/t/p/w500/oPxnRhyAIzJKGUEdSiwTJQBa3NM.jpg',
+    poster: './assets/images/9.jpg',
     synopsis:
       'A young drummer enrolls in a cut-throat music conservatory where his instructor pushes him to the limit.',
     videoUrl:
@@ -134,7 +134,7 @@ export const mockData = [
     year: '1994',
     genre: 'Drama',
     rating: 9.3,
-    poster: 'https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg',
+    poster: './assets/images/10.jpg',
     synopsis:
       'Two imprisoned men bond over years, finding solace and eventual redemption through acts of decency.',
     videoUrl:
@@ -147,7 +147,7 @@ export const mockData = [
     year: '1994',
     genre: 'Crime',
     rating: 8.9,
-    poster: 'https://image.tmdb.org/t/p/w500/dM2w364MScsjFf8pfMbaWUcWrR.jpg',
+    poster: './assets/images/11.jpg',
     synopsis:
       'The lives of two hitmen, a boxer, and others intertwine in a series of violent, darkly comic events.',
     videoUrl:
@@ -160,7 +160,7 @@ export const mockData = [
     year: '1972',
     genre: 'Crime',
     rating: 9.2,
-    poster: 'https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg',
+    poster: './assets/images/12.jpg',
     synopsis:
       'The aging patriarch of an organized crime dynasty transfers control of his empire to his reluctant son.',
     videoUrl:
@@ -173,7 +173,7 @@ export const mockData = [
     year: '2000',
     genre: 'Action',
     rating: 8.5,
-    poster: 'https://image.tmdb.org/t/p/w500/pRn3TJHbAqCAO7VZ8zsEZec5ek.jpg',
+    poster: './assets/images/13.jpg',
     synopsis:
       'A betrayed Roman general fights his way back to power to seek revenge against the corrupt emperor.',
     videoUrl:
@@ -186,7 +186,7 @@ export const mockData = [
     year: '1994',
     genre: 'Drama',
     rating: 8.8,
-    poster: 'https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg',
+    poster: './assets/images/14.jpg',
     synopsis:
       'The life story of Forrest Gump, a man with a low IQ who influences several decades of American history.',
     videoUrl:
@@ -199,7 +199,7 @@ export const mockData = [
     year: '2023',
     genre: 'Animation',
     rating: 8.7,
-    poster: 'https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg',
+    poster: './assets/images/15.jpg',
     synopsis:
       'Miles Morales embarks on a multiversal adventure, meeting different Spider-People to face a new threat.',
     videoUrl:
@@ -208,13 +208,13 @@ export const mockData = [
   },
   {
     id: '16',
-    title: 'The Piano Teacher',
-    year: '2023',
+    title: 'Spider-Man: Into the Spider-Verse',
+    year: '2018',
     genre: 'Animation',
     rating: 8.7,
-    poster: 'https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg',
+    poster: './assets/images/16.jpg',
     synopsis:
-      'Miles Morales embarks on a multiversal adventure, meeting different Spider-People to face a new threat.',
+      'After gaining superpowers from a spider bite, Miles Morales protects the city as Spider-Man. Soon, he meets alternate versions of himself and gets embroiled in an epic battle to save the multiverse.',
     videoUrl:
       'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     subtitles: 'https://www.example.com/subs/spiderverse.vtt',
