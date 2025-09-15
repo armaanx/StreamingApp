@@ -1,19 +1,26 @@
-import { Pressable, Text } from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
+import { Image, Pressable } from 'react-native';
 import { CatalogueItemType } from '../assets/mockData';
+import { posters } from '../assets/images';
 
 interface CatalogueItemProps {
   item: CatalogueItemType;
   onPress: (itemId: string) => void;
 }
 export default function CatalogueItem({ item, onPress }: CatalogueItemProps) {
-  const { id, title } = item;
+  const { id, poster } = item;
+  console.log(poster);
   return (
     <Pressable
-      className="active:opacity-80 flex-1 flex-col items-start justify-center gap-2 bg-zinc-800 rounded-lg p-2 drop-shadow-md mx-2 h-48 aspect-square"
+      className="active:opacity-60 flex-1  items-start justify-center gap-2 bg-black rounded-xl p-1 mx-2 h-48 aspect-[2/3] antialiased"
       onPress={() => onPress(id)}
     >
-      <Text className="text-white">{id}</Text>
-      <Text className="text-white">{title}</Text>
+      <Image
+        source={posters[id]}
+        resizeMode="cover"
+        className="w-full h-full"
+        style={{ borderRadius: 12 }}
+      />
     </Pressable>
   );
 }
