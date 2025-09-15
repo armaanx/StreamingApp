@@ -36,7 +36,15 @@ This project implements a three-screen video experience:
   - Exposes props: `source`, `paused`, `seekTime`, `startTime`, `mute`
   - Emits events: `onProgress`, `onPlaybackStateChanged`, `onIsPlayingChanged`, `onLoad`
 - State Handling: Local state + navigation params
-  **iOS Note:** AVPlayer bridge not implemented because of no macOS build environment; a placeholder is rendered to prevent crashes. The design allows easy future integration of an AVPlayer module because the JS code is platform agnostic.
+
+---
+
+## Platform Notes
+
+- **Android:** Fully functional using custom ExoPlayer native bridge
+- **iOS:** AVPlayer bridge not implemented due to no macOS build environment
+  - A placeholder is rendered on iOS to avoid crashes
+  - JS code is platform-agnostic, allowing easy AVPlayer integration later
 
 ---
 
@@ -151,6 +159,7 @@ If the app fails to build or install using `npm run android`, try the following:
    ./gradlew clean assembleDebug
    cd ..
    npm run android
+   ```
 
 ---
 
