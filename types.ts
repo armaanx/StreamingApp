@@ -24,5 +24,3 @@ export type VideoPlayerScreenProps = NativeStackScreenProps<
   RootStackParamList,
   'Video'
 >;
-
-export type ContinueWatchingItem = CatalogueItemType & { progress: number };
