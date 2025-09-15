@@ -25,12 +25,20 @@ export default function AppNavigatior() {
         <Stack.Screen
           name="Details"
           component={DetailsScreen}
-          options={{ headerShown: false, orientation: 'portrait' }}
+          options={{
+            headerShown: false,
+            orientation: 'portrait',
+            animation: 'none',
+          }}
         />
         <Stack.Screen
           name="Video"
           component={VideoPlayerScreen}
-          options={{ headerShown: false }}
+          options={{
+            headerShown: false,
+            orientation: 'landscape',
+            animation: 'none',
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
