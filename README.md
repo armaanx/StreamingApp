@@ -1,3 +1,45 @@
+# React Native Video App
+
+A React Native (TypeScript) application demonstrating a minimal, production-style video streaming flow with native playback.
+
+---
+
+## Overview
+
+This project implements a three-screen video experience:
+
+- **Home:** Catalogue list of videos (FlatList)
+- **Details:** Title, synopsis, and a Play button
+- **Player:** Fullscreen native video player (ExoPlayer on Android)
+
+---
+
+## What I've Achieved
+
+- Designed and implemented a clean, production-style RN app focusing on core video playback flow
+- Integrated native video playback (ExoPlayer) via a **custom RN bridge**, not `react-native-video`
+- Implemented navigation flow from catalogue → details → player
+- Built a minimal, intuitive UI with working **play/pause**, **seek**, **resume**, and time updates (every 1000ms)
+- Added **mute/unmute** button and **subtitle toggle placeholder** for extensibility
+- Implemented **auto-hide controls** for immersive playback experience
+- Added **resume/continue watching** support using persistent progress tracking
+
+---
+
+## Tech Stack
+
+- React Native (TypeScript)
+- React Navigation for screen-to-screen navigation
+- NativeWind for styling (Tailwind CSS for RN)
+- Custom Native Module (Android):
+  - `ExoPlayerViewManager` for ExoPlayer 3 integration
+  - Exposes props: `source`, `paused`, `seekTime`, `startTime`, `mute`
+  - Emits events: `onProgress`, `onPlaybackStateChanged`, `onIsPlayingChanged`, `onLoad`
+- State Handling: Local state + navigation params
+  **iOS Note:** AVPlayer bridge not implemented because of no macOS build environment; a placeholder is rendered to prevent crashes. The design allows easy future integration of an AVPlayer module because the JS code is platform agnostic.
+
+---
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
@@ -84,7 +126,33 @@ You've successfully run and modified your React Native App. :partying_face:
 
 # Troubleshooting
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+If you encounter issues running or building the project, start with the official [React Native Troubleshooting Guide](https://reactnative.dev/docs/troubleshooting).
+
+---
+
+### Android Build Issues
+
+If the app fails to build or install using `npm run android`, try the following:
+
+1. **Clean and rebuild the Android project manually**
+
+   - Open the `android/` folder in **Android Studio**
+   - Sync Gradle files, then choose **Build → Clean Project** followed by **Build → Rebuild Project**
+   - Once the build succeeds, return to the root folder and run:
+
+   ```sh
+   npm run android
+
+   ```
+
+2. **Build from the command line**
+   ```sh
+   cd android
+   ./gradlew clean assembleDebug
+   cd ..
+   npm run android
+
+---
 
 # Learn More
 
